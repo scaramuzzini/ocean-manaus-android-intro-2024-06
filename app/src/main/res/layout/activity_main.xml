@@ -32,11 +32,28 @@
         app:layout_constraintTop_toBottomOf="@id/texto1"
         >
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Digite seu nome:" />
+
+        <EditText
+            android:id="@+id/nomeDoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clique aqui" />
+            android:text="Salvar" />
+
+        <TextView
+            android:id="@+id/nomeDigitado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O nome digitado foi:"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
