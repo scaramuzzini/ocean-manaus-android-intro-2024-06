@@ -25,11 +25,17 @@ class MainActivity : AppCompatActivity() {
         val resultadoIntent = Intent(this, ResultadoActivity::class.java)
         buttonSalvar.setOnClickListener {
             //Log.d("oceanbrasil", "O texto do botao e:"+button2.text.toString())
-            Toast.makeText(this, nomeDoUsuario.text, Toast.LENGTH_LONG).show()
-            //val nome = nomeDoUsuario.text.toString()
+            val nome = nomeDoUsuario.text.toString()
             //nomeDigitado.text = "O nome digitado foi: $nome"
-            resultadoIntent.putExtra("NOME_DIGITADO", nomeDoUsuario.text.toString())
-            startActivity(resultadoIntent)
+
+            if (nome.isNotEmpty()) {
+                resultadoIntent.putExtra("NOME_DIGITADO", nomeDoUsuario.text.toString())
+                startActivity(resultadoIntent)
+            } else {
+                Toast.makeText(this, "Voce precisa digitar um nome primeiro",
+                    Toast.LENGTH_LONG).show()
+            }
+
         }
     }
 }
