@@ -35,5 +35,5 @@
         app:layout_constraintTop_toBottomOf="@id/textViewResultado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="VOLTAR"/>
+        android:text="VOLTAR" />
 </androidx.constraintlayout.widget.ConstraintLayout>

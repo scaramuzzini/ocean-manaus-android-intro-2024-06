@@ -1,6 +1,7 @@
 package com.oceanbrasil.ocean202406introparte1
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,5 +20,12 @@ class ResultadoActivity : AppCompatActivity() {
         val textViewResultado = findViewById<TextView>(R.id.textViewResultado)
         textViewResultado.text = "O nome digitado foi: $nomeDigitado"
 
+        //Bind do Botao Voltar
+        val buttonVoltar = findViewById<Button>(R.id.buttonVoltar)
+
+        //Acao do botao
+        buttonVoltar.setOnClickListener {
+            finish()
+        }
     }
 }
